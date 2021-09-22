@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'payment-form';
+  name:string='';
+  date:string=''
+  onNameChange(event:Event){
+      this.name=(event.target as HTMLInputElement).value;
+  }
+  onDateChange(event:Event){
+    this.date=(event.target as HTMLInputElement).value;
+  }
 }
